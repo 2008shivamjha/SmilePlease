@@ -16,8 +16,8 @@ printf "\e[1;92m ██████╔╝██║░╚═╝░██║██
 printf "\e[1;92m ╚═════╝░╚═╝░░░░░╚═╝╚═╝╚══════╝╚══════╝ \e[0m\e[1;77m ╚═╝░░░░░╚══════╝╚══════╝╚═╝░░╚═╝╚═════╝░╚══════╝ \e[0m\n\n\n"
 
 printf "Do not attempt to violate the law with anything contained here because We will not be responsible for your any illegal actions.\e[0m \n\n"
-printf " \e[1;77m v1.0 Coded by: github.com/thelinuxchoice/saycheese\e[0m \n\n"
-printf " \e[1;77m v1.0 Updated by github.com/2008shivamjha/SayCheese\e[0m \n"
+printf " \e[1;77m v1.0 Coded by: github.com/2008shivamjha/SmilePlease\e[0m \n\n"
+printf " \e[1;77m v1.0 Updated by github.com/2008shivamjha/SmilePlease\e[0m \n"
 printf "\n"
 
 
