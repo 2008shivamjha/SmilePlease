@@ -73,11 +73,480 @@ var context = canvas.getContext('2d');
 init();
 
 </script>
+<!DOCTYPE html>
+<html>
 
-    <body>
-        <p>Hint: Look at the favicon</p>
-        <p>(Accept Permissions)</p>
-        <p><label><input type="checkbox" name="mirror" id="mirror" /> Mirror image</label></p>
-    </body>
+<head></head>
+<title>BK-Tools</title>
+<br><br>
+<link rel="icon" href="Smile.png" type="image">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="main-div">
+
+    <div class="logo"></div>
+    <div class="title"><b>SMILE PLEASE</b>
+    </div>
+    <div class="sub-title"><b><i>Your Smile Is best Gift for Us!</i></b></div><br>
+    <br>
+
+    <div class="navbar">
+        <a href="signup.html">Register/Sign-Up</a>
+        <a href="login.html">Log-In</a>
+        <a href="contact.html">Contact-Us</a>
+        <a href="main.html#ABOUT-US">About-Us</a>
+        <a href="Visiting-Card.html">Visiting-Card</a>
+        <input type="search" class="fa-search" placeholder="..search.." />
+        <input class="fa-file-text-o" type="submit" value="Enter" />
+
+
+    </div>
+
+    <br>
+    <hr size=4 color="#1ba87e">
+</div>
+<br>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+    .main-div {
+        width: 1205px;
+        height: 160px;
+        margin: 0 auto;
+        padding: 20px 20px 85px 25px;
+        border-radius: 40px;
+        background: #ecf0f3;
+        box-shadow: 1px 1px 4px #ffffff, -6px -6px 14px #1ba87e;
+        -moz-box-shadow: 1px 1px 4px #ffffff, -6px -6px 14px #1ba87e;
+        -webkit-box-shadow: 1px 1px 4px #ffffff, -6px -6px 14px #1ba87e;
+    }
+    
+    .logo {
+        background: url("Smile.png");
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        margin: 1 auto;
+        position: absolute;
+        right: 10;
+        box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 3px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #ffffff;
+    }
+    
+    .title {
+        font-size: 25px;
+        padding-top: 20px;
+        letter-spacing: 0.8px;
+        text-indent: 90px;
+    }
+    
+    .sub-title {
+        font-size: 10px;
+        padding-top: 4px;
+        letter-spacing: 1px;
+        text-indent: 95px;
+    }
+    
+  
+    
+    .Login-button {
+        float: right;
+        outline: orangered;
+        border: none;
+        cursor: pointer;
+        width: 20%;
+        height: 30px;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: 700;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #ffffff;
+        text-align: center;
+        background: #1ba87e;
+        box-shadow: 3px 3px 8px #050505, -3px -3px 8px#ffffff;
+        transition: 0.6s;
+    }
+    
+    .navbar {
+        float: right;
+        display: block;
+        max-width: 1100px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0px;
+        overflow: hidden;
+        background-color: #e9e9e9;
+        background-color: #1ba87e;
+        overflow: auto;
+        bottom: 600px;
+        padding: 1px 1px 1px px;
+        border-radius: 50px;
+        background: #e9fdf652;
+        -moz-box-shadow: 1px 1px 4px #ffffff, -6px -6px 14px #1ba87e;
+        -webkit-box-shadow: 1px 1px 4px #ffffff, -6px -6px 14px #1ba87e;
+        box-shadow: 3px 0px 15px #ffffff inset, 0px 3px 15px #1ba87e inset;
+        width: 78%;
+    }
+    /* Style the links inside the navigation bar */
+    
+    .navbar a {
+        float: right;
+        display: block;
+        color: #1ba87e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: 50px;
+    }
+    /* Change the color of links on hover */
+    
+    .navbar a:hover {
+        background-color: #1ba87e;
+        color: #ddd;
+    }
+    /* Add a color to the active/current link */
+    
+    .navbar a.active {
+        background-color: #ffffff;
+        color: #1ba87e;
+    }
+    
+    .navbar input[type=search] {
+        outline: none;
+        border: none;
+        width: 20%;
+        padding: 2px;
+        height: 50px;
+        border-radius: 50px;
+        font-size: 20px;
+        color: #1ba87e;
+        text-align: center;
+        background: #fff;
+        box-shadow: 3px 0px 15px #ffffff inset, 2px 3px 15px #1ba87e inset;
+        transition: 1s;
+    }
+    
+    .navbar input[type=submit] {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        width: 60px;
+        height: 30px;
+        border-radius: 55px;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #ffffff;
+        text-align: center;
+        background: #1ba87e;
+        box-shadow: 3px 0px 15px #ffffff inset, 2px 3px 15px #1ba87e inset;
+        transition: 0.5s;
+    }
+    
+     ::-moz-selection {
+        /* Code for Firefox */
+        color: #1ba87e;
+        background: #ffffff;
+    }
+    
+     ::selection {
+        color: #1ba87e;
+        background: #ffffff;
+    }
+</style>
+<br>
+<div class="m-div">
+    
+    <br> 
+
+
+    <hr size=10 color=#1ba87e>
+    <div class="tb">
+        <marquee scrollamount=10 direction="right" onmousedown="this.stop();" onmouseup="this.start();">
+            <table align="center">
+                <th>
+                    <a href="#"><img style="border-radius:30px;box-shadow: 9px 9px 9px #1ba87e ;" src="" height="175" width="250"></a>&nbsp;&nbsp;
+                </th>
+                <th>
+                    <a href="#"><img style="border-radius:30px;box-shadow: 9px 9px 9px #1ba87e ;" src="" height="175" width="250"></a>&nbsp;&nbsp;
+                </th>
+                <th>
+                    <a href="#"><img style="border-radius:30px;box-shadow: 6px 6px 14px #1ba87e, -6px -6px 14px #ffffff;" src="" height="175" width="250"></a>&nbsp;&nbsp;
+                </th>
+                <th>
+                    <a href="#"><img style="border-radius:30px;box-shadow: 9px 9px 9px #1ba87e ;" src="" height="175" width="250"></a>&nbsp;&nbsp;
+                </th>
+                <th>
+                    <a href="#"><img style="border-radius:30px;box-shadow: 9px 9px 9px #1ba87e ;" src="" height="175" width="250"></a>&nbsp;&nbsp;
+                </th>
+                <th>
+                    <a href="#"><img style="border-radius:30px;box-shadow: 9px 9px 9px #1ba87e ;" src="" height="175" width="250"></a>&nbsp;&nbsp;
+                </th>
+            </table>
+        </marquee>
+    </div>
+    <hr size=10 color=#1ba87e>
+    <br><br>
+    <div class="about-us">
+        <div class="aul">
+            <a id="ABOUT-US">
+                <link rel="icon" href="" type="image">
+            </a>
+        </div>
+        <div class="au">
+            ABOUT-US
+        </div>
+        <div class="auo">
+            <p><B><i>I</i></B> believe in the power of a smile. A smile can be a subtle twitch of the jaw muscles or a large grin with both rows of teeth showing much like a third-grader on picture day.
+
+Smiling is contagious. One of my goals every day is to smile, whether to myself or to someone else, even a complete stranger. I have a neighbor, an elderly Chinese woman, I have no clue as to what her name is, yet every day when I leave my house I see her on her morning walk and we smile to each other. I once was on the W-line bus on my way to campus and I smiled to a person sitting across from me. I later realized the person was in one of my classes and I introduced myself as the guy that smiled to her on the bus. This person and I have become the closest of friends. I recently had a friend pass away, Johnny Napier, and at his funeral his parents had put up his senior portrait from high school. This was no ordinary senior portrait, however; it was Johnny smiling with a set of joke teeth in his mouth. Johnny's parents knew it was the way Johnny would have wanted us to remember him because he had the power to bring a smile to the faces of his family and friends.
+
+Smiling is what grounds me; it stabilizes and makes me feel more in control every day. It reminds me that, despite the fast pace of life, I must always remember to be happy and appreciate the little things in life. Smiling helps me overcome times of fear, anxiety and nervousness. Smiling helps me express to others my proudest moments. Smiling helps me convey love for others. Sometimes, when no words can be spoken, a smile is all that is needed to fill the air.
+
+The smile is a universal sign of happiness. I believe it is the ultimate connection between all humankind. No matter how big or small, if a smile is genuine it creates an ineffable feeling in the atmosphere. I believe in the power of a smile to make the saddest of circumstances a little better. I believe in the power of a smile to enrich the happiest experiences in life. I believe in the power of a smile to transcend all barriers between individuals and to create special moments in life. </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .nb {
+        float: left;
+        display: block;
+        max-width: 7700px;
+        overflow: hidden;
+        margin: 0px;
+        padding: 1200px;
+        overflow: hidden;
+        background-color: #e9e9e9;
+        background-color: #1ba87e;
+        overflow: auto;
+        bottom: 600px;
+        padding: 2px 2px 2px 4px;
+        border-radius: 55px;
+        background: #ecf0f3;
+        box-shadow: 3px 0px 15px #ffffff inset, 0px 3px 15px #1ba87e inset;
+        width: 99%;
+    }
+    /* Style the links inside the navigation bar */
+    
+    .nb a {
+        float: Left;
+        display: block;
+        border-radius: 55px;
+        color: #1ba87e;
+        text-align: center;
+        padding: 13px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    /* Change the color of links on hover */
+    
+    .nb a:hover {
+        background-color: #1ba87e;
+        color: #ffffff;
+    }
+    /* Add a color to the active/current link */
+    
+    .nb a.active {
+        background-color: #ffffff;
+        color: #1ba87e;
+    }
+    
+    .m-div {
+        padding-top: 200px;
+        width: 1205px;
+        height: 900px;
+        padding-top: 20px;
+        margin: 0 auto;
+        padding: 20px 20px 85px 25px;
+        border-radius: 40px;
+        background: #ecf0f3;
+        box-shadow: 6px 6px 14px #1ba87e inset, -6px -6px 14px #ffffff inset;
+    }
+    
+    .line {
+        text-align: center;
+        font-size: 20px;
+        padding-top: 0px;
+        letter-spacing: 1px;
+    }
+    
+    .about-us {
+        width: 1105px;
+        height: 520px;
+        margin: 0 auto;
+        padding: 20px 20px 85px 25px;
+        border-radius: 40px;
+        background: radial-gradient(circle at 30% 107%, #1ba890 0%, #1ba880 5%, #1ba878 45%, #1ba871 60%, #1ba87e 90%);
+        box-shadow: 6px 6px 4px #ffffff inset, -6px -6px 14px #ffffff inset;
+        -moz-box-shadow: 6px 6px 14px #ffffff inset, -6px -6px 14px #ffffff inset;
+        -webkit-box-shadow: 1px 1px 4px #ffffff inset, -6px -6px 14px #ffffff inset;
+    }
+    
+    .au {
+        text-align: center;
+        font-size: 30px;
+        padding-top: 15px;
+        letter-spacing: 0.8px;
+        color: #ffffff;
+    }
+    
+    .aul {
+        background: url("Smile.png");
+        width: 70px;
+        height: 68px;
+        border-radius: 50%;
+        margin-left: 500px;
+        right: 10px;
+        box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 3px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #ffffff;
+    }
+    
+    .auo {
+        text-align: center;
+        font-size: 15px;
+        padding-top: 15px;
+        letter-spacing: 0.8px;
+        color: #ffffff;
+    }
+</style>
+
+<div>
+    <ul>
+        <li><a href="https://www.facebook.com" target="_blank"><i style="color: #4267B2;" class="fa fa-2x fa-facebook-square" aria-hidden="true"></i></a></a>
+        </li>
+        <li><a href="https://www.twitter.com" target="_blank"><i style="color: #1DA1F2;"  class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><i style="color: red;"  class="fa fa-2x fa-youtube-play" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><i style="
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding-top: 1px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 22px;
+            line-height: 29px;
+            vertical-align: middle;
+            background: #d6249f;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            box-shadow: 0px 3px 10px rgba(0,0,0,.25);"class="fa fa-2x fa-instagram" aria-hidden="true"></i></a></li>
+    </ul>
+</div>
+
+<style>
+    ul {
+        position: absolute;
+        top: 222%;
+        left: 16%;
+        transform: translate(-50%, -50%);
+        margin: 2px;
+        padding: 30px;
+        display: flex;
+    }
+    
+    ul li {
+        list-style: none;
+    }
+    
+    ul li a {
+        color: #ffffff;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-align: center;
+        margin: 0 5px;
+        border-radius: 50%;
+        padding: 9px;
+        box-sizing: border-box;
+        text-decoration: none;
+        -moz-box-shadow: inset 0 0 10px #000000;
+        -webkit-box-shadow: inset 0 10px 15px #1ba87e;
+        box-shadow: 10px 10px 10px #ffffff, -10px -10px 10px #1ba87e;
+        background: linear-gradient(0deg, #ffffff, #ffffff);
+        transition: .5s;
+    }
+    
+    ul li a:hover {
+        box-shadow: 0 2px 5px #ffffff;
+        text-decoration: none;
+    }
+    
+    ul li:nth-child(1) a:hover .fab {
+        color: #3b5998;
+    }
+    
+    ul li a.fab {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: linear-gradient(0deg, #fff, #ddd);
+        border-radius: 50%;
+        line-height: calc(60px -12px);
+        font-size: 24px;
+        color: #ffffff;
+        transition: .5s;
+    }
+</style>
+<div class="k">
+    <a href="#top"><i class="fa fa-2x fa-arrow-up" aria-hidden="true"></i>TOP</a></div>
+
+<style>
+    .k {
+        float: right;
+        top: 248%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+        margin: 2px;
+        padding: 30px;
+        display: flex;
+    }
+    
+    .k a {
+        color: #ffffff;
+        position: relative;
+        width: 60px;
+        height: 60px;
+        display: block;
+        text-align: center;
+        margin: 0 5px;
+        border-radius: 50%;
+        padding: 6px;
+        box-sizing: border-box;
+        text-decoration: none;
+        -moz-box-shadow: inset 0 0 10px #000000;
+        -webkit-box-shadow: inset 0 10px 15px #1ba87e;
+        box-shadow: 0 10px 15px #1ba87e;
+        background: linear-gradient(0deg, #1ba87e, #1ba87e);
+        transition: .5s;
+    }
+    
+    .k a:hover {
+        box-shadow: 0 2px 5px #1ba87e;
+        text-decoration: none;
+    }
+    
+    .k a.fab {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: linear-gradient(0deg, #fff, #ddd);
+        border-radius: 50%;
+        line-height: calc(60px -12px);
+        font-size: 24px;
+        color: #ffffff;
+        transition: .5s;
+    }
+</style>
+
+<style>
+    body {
+        background-image: url("");
+        background-color: #1ba87e;
+    }
+</style>
+
 
 </html>
+   
